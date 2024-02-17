@@ -16,7 +16,7 @@ application = Flask(__name__)
 ### Code GitHub Render
 application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 # application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
-DBVAR = DATABASE_URL
+DBVAR = os.environ['DATABASE_URL']  
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
 application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 

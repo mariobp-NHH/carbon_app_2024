@@ -9,7 +9,7 @@ application = Flask(__name__)
 ### Code GitHub
 #application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 application.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
-DBVAR="postgresql://os.environ.get("DATABASE")"
+DBVAR=os.environ.get("DATABASE")
 application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
 application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
